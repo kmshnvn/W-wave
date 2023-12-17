@@ -1,0 +1,179 @@
+@import '_variables';
+
+.adv {
+    background-color: $lightBlackColor;
+}
+
+.adv__container {
+    padding-top: $sectionPadding;
+    padding-bottom: 133px;
+
+    @media (max-width: $tablet) {
+        padding-bottom: $sectionPadding;
+    }
+
+    @media (max-width: $smallTablet) {
+        flex-direction: column;
+        padding-top: 54px;
+    }
+
+    @media (max-width: $horizontalMobile) {
+        padding-bottom: 54px;
+    }
+}
+
+.adv__picture {
+    flex-basis: 57%;
+    // padding-top: 10px;
+    align-content: center;
+    flex-wrap: wrap;
+
+    @media (max-width: $tablet) {
+        flex-basis: 48%;
+    }
+}
+
+.adv__center {
+    position: relative;
+    height: max-content;
+    
+    @media (max-width: $tablet) {
+        padding-bottom: 35px;
+    }
+
+    @media (max-width: $smallTablet) {
+        padding-bottom: 0;
+        margin-bottom: 45px;
+    }
+
+    @media (max-width: $horizontalMobile) {
+        margin-bottom: 32px;
+    }
+}
+
+.adv__sticker {
+    position: absolute;
+    background-image: url(../img/adv-stic.png);
+    background-repeat: no-repeat;
+    top: -7px;
+    left: -4px;
+    background-size: contain;
+    width: 100%;
+    height: 28%;
+
+    @media (max-width: $tablet) {
+        top: -5px;
+        left: 1px;
+        height: 25.3%;    
+    }
+
+    @media (max-width: $smallTablet) {
+        top: 0;
+        left: 0;
+        height: 33%;
+    }
+
+    @media (max-width: $horizontalMobile) {
+        height: 27%;
+    }
+
+}
+
+.adv__info {
+    flex-basis: 43%;
+    padding-left: 32px;
+
+    @media (max-width: $tablet) {
+        flex-basis: 52%;
+    }
+
+    @media (max-width: $smallTablet) {
+        flex-basis: unset;
+        padding-left: 0;
+      }
+}
+
+.adv__header {
+    color: $promoColor;
+    background-image: url(../img/adv-snake.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: $marginMain;
+    margin-bottom: 19px;
+
+    @media (max-width: $smallTablet) {
+        max-width: 70%;
+        background-image: none;
+        padding-bottom: 0;
+    }
+
+    @media (max-width: $horizontalMobile) {
+        max-width: 100%;
+        margin-bottom: 11px;
+
+    }
+}
+
+.adv__descr {
+    margin-bottom: $marginMain;
+
+    @media (max-width: $smallTablet) {
+        background-image: url(../img/adv-snake.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+        padding-top: $marginMain;
+    }
+
+    @media (max-width: $horizontalMobile) {
+        background-size: auto;
+        margin-bottom: 13px;
+        background-position: 55% 0;
+    }
+    
+}
+
+.adv__text {
+    font-size: $mainFontSize;
+    line-height: 180%;
+    color: $whiteColor;
+
+    @media (max-width: $horizontalMobile) {
+        font-size: 14px;
+        line-height: 156%;
+    }
+}
+
+.adv__text:not(:last-child) {
+    margin-bottom: 13px;
+}
+
+.adv__price {
+    font-weight: $mediumFont;
+    font-size: 30px;
+    line-height: 100%;
+    color: $whiteColor;
+    margin-bottom: $marginMain;
+
+    @media (max-width: $horizontalMobile) {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
+
+.adv__btn {
+    padding: 23px 12px 23px 40px;
+    font-size: $mediumFontSize;
+    line-height: 100%;
+    color: $promoColor;
+    border-color: $promoColor;
+    background-image: url(../img/adv-ya-market.svg);
+    background-repeat: no-repeat;
+    background-position: 4% 50%;
+
+    @media (max-width: $horizontalMobile) {
+        font-size: $mainFontSize;
+        padding: 14px 15px 16px 41px;
+        background-position: 6% 50%;
+    }
+}

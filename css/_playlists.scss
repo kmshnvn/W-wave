@@ -1,0 +1,440 @@
+@import '_variables';
+
+.playlists__container {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $horizontalMobile) {
+    padding-top: 55px;
+    padding-bottom: 53px;
+    padding-right: 0;
+  }
+}
+
+.playlists__main {
+  flex-basis: 30%;;
+  margin-right: $marginMain;
+  min-width: 333px;
+
+  @media (max-width: $mobile) {
+    min-width: 100%;
+    margin-right: 0;
+  }
+}
+
+.playlists__header {
+  margin-bottom: 12px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 18px;
+    padding-right: 32px;
+  }
+}
+
+.p-radio-btn__header {
+  font-size: $mainFontSize;
+  line-height: 100%;  
+  color: $GreyColor;
+  margin-bottom: 13px;
+
+  @media (max-width: $mobile) {
+    font-size: $smallFontSize;
+    margin-bottom: 7px;
+    padding-right: 32px;
+  }
+}
+
+.playlists__radio-btn {
+  @media (max-width: $mobile) {
+    margin-bottom: 6px;
+  }
+}
+
+.p-radio-btn__list {
+  flex-direction: column;
+  padding-bottom: 26px;
+  margin-bottom: 38px;
+  border-bottom: 1px solid $shadeGreyColor;
+
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+    max-height: 215px;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: -5px;
+    align-content: start;
+  }
+
+  @media (max-width: $smallTablet) {
+    max-height: 250px;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: row;
+    overflow: auto;
+    flex-wrap: nowrap;
+  }
+}
+
+.pretty:not(:last-child) {
+  margin-bottom: 26.05px;
+  width: max-content;
+
+  @media (max-width: $tablet) {
+    margin-right: 34px;
+  }
+
+  @media (max-width: $smallTablet) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-right: 15px;
+    margin-bottom: 0;
+
+  }
+}
+
+.state label {
+    font-size: $mediumFontSize;
+    line-height: 100%;
+    color: $mainBlackColor;
+
+    @media (max-width: $mobile) {
+      // background-color: $primaryColor;
+      border-radius: 77px;
+      padding: 7.5px 18px;
+      color: $primaryColor;
+      font-size: $mainFontSize;
+      border: 2px solid $primaryColor;
+    }
+}
+
+.pretty .state label {
+  text-indent: 2.1em;
+
+  @media (max-width: $mobile) {
+    text-indent: 0;
+  }
+}
+
+.pretty .state label:after, 
+.pretty .state label:before {
+  width: calc(1em + 7px);
+  height: calc(1em + 7px);
+  left: 1.5px;
+  top: calc((0% - (100% - 1em)) - 18%);
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.pretty .state label:before {
+  border: 2px solid $GreyColor;
+}
+
+.pretty.p-default .state label:after {
+  transform: scale(0.5);
+}
+
+.playlists__info {
+  background-image: url(../img/playlists-age.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 36px;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.playlist-mobile-info {
+  background-image: url(/img/playlists-age.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 36px;
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+  }
+
+  @media (max-width: $mobile) {
+    padding-right: 32px;
+  }
+}
+
+.playlist-info__text {
+  line-height: 22px;
+  color: $GreyColor;
+}
+
+.playlist-mobile-info__text {
+  line-height: 22px;
+  color: $GreyColor;
+
+  @media (max-width: $mobile) {
+    font-size: $smallFontSize;
+    line-height: 16px;
+  }
+}
+
+.playlist-mobile-info__site {
+  font-style: italic;
+  font-weight: $lightFont;
+  line-height: 22px;
+  color: $GreyColor;
+
+  @media (max-width: $mobile) {
+    font-size: $smallFontSize;
+  }
+}
+
+.playlist-info__site {
+  font-style: italic;
+  font-weight: $lightFont;
+  line-height: 22px;
+  color: $GreyColor;
+}
+
+.playlists__cards {
+  flex-basis: 65.78%;
+
+  @media (max-width: $tablet) {
+    flex-basis: 59%;
+  }
+
+  @media (max-width: $mobile) {
+    padding-right: 32px;
+  }
+}
+
+.playlists__items {
+  padding-top: 14px;
+  padding-left: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -30px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 38px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $shadeGreyColor;
+  }
+
+  @media (max-width: $smallTablet) {
+    padding-top: 20px;
+  }
+
+  @media (max-width: $horizontalMobile) {
+    justify-content: space-around;
+  }
+
+  @media (max-width: $mobile) {
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 2px;
+    margin-bottom: 28px;
+  }
+}
+
+.playlists__item {
+  margin-bottom: 32px;
+
+  @media (max-width: $tablet) {
+    flex-basis: 31%;
+    width: 255px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $smallTablet) {
+    flex-basis: unset;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 44%;
+
+  }
+}
+
+.playlists__link {
+  @media (max-width: $tablet) {
+    display: flex;
+    min-width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+}
+
+.playlists__item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.playlist-item__img {
+  position: relative;
+  width: 160px;
+  height: 160px;
+
+  @media (max-width: $tablet) {
+    min-width: 112px;
+    height: 112px;
+    background-size: cover;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.playlist-item__img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $mainBlackColor;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.playlist-item__img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(/img/play_btn.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.playlist-item__country {
+  font-size: 0;
+  position: absolute;
+  right: 0;
+  padding: 4px;
+  background-color: $mainBlackColor;
+
+  @media (max-width: $tablet) {
+    left: 0;
+    right: auto;
+  }
+
+  @media (max-width: $mobile) {
+    left: auto;
+    right: 0;
+  }
+}
+
+.playlist-item__img-1 {
+  background-image: url(../img/playlists-1.jpg);
+}
+
+.playlist-item__img-2 {
+  background-image: url(../img/playlists-2.jpg);
+}
+
+.playlist-item__img-3 {
+  background-image: url(../img/playlists-3.jpg);
+}
+
+.playlist-item__img-4 {
+  background-image: url(../img/playlists-4.jpg);
+}
+
+.playlist-item__img-5 {
+  background-image: url(../img/playlists-5.jpg);
+}
+
+.playlist-item__img-6 {
+  background-image: url(../img/playlists-6.jpg);
+}
+
+.playlist-item__img-7 {
+  background-image: url(../img/playlists-7.jpg);
+}
+
+.playlist-item__img-8 {
+  background-image: url(../img/playlists-8.jpg);
+}
+
+.playlist-item__img-9 {
+  background-image: url(../img/playlists-9.jpg);
+}
+
+.playlist-item__img-10 {
+  background-image: url(../img/playlists-10.jpg);
+}
+
+.playlist-item__img-11 {
+  background-image: url(../img/playlists-11.jpg);
+}
+
+.playlist-item__img-12 {
+  background-image: url(../img/playlists-12.jpg);
+}
+
+.playlist-item__info {
+  max-width: 160px;
+  padding: 15px;
+  outline: 1px solid #E6E8EC;
+  outline-offset: -1px;
+
+  transition-property: background-color, outline, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+
+  @media (max-width: $tablet) {
+    padding-left: 10px;
+    padding-top: 40px;
+    padding-right: 5px;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.playlist-item__header {
+  font-weight: $boldFont;
+  font-size: $mainFontSize;
+  line-height: 100%;
+  margin-bottom: 4px;
+
+  @media (max-width: $mobile) {
+    font-weight: $mediumFont;
+    font-size: $smallFontSize;
+    margin-bottom: 6px;
+  }
+}
+
+.playlist-item__text {
+  font-size: $smallFontSize;
+  line-height: 100%;
+  color: $GreyColor;
+
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+
+  @media (max-width: $mobile) {
+    font-weight: $normalFont;
+    font-size: 9px;
+  }
+}
+

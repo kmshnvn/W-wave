@@ -1,0 +1,44 @@
+$containerMaxWidth: 1240px;
+
+$screenDesctop: 1240px;
+$screenTablet: 1024px;
+$screenSmallTablet: 768px;
+$screenHorizontalMobile: 576px;
+$screenMobile: 320px;
+
+$tablet: $screenDesctop - 1px; 
+$adaptiveS: 1100px;
+$smallTablet: $screenTablet - 1px; 
+$horizontalMobile: $screenSmallTablet - 1px;
+$mobile: $screenHorizontalMobile - 1px;
+
+$fontFamily: 'Muller', sans-serif;
+$lightFont: 300;
+$normalFont: 400;
+$mediumFont: 500;
+$boldFont: 700;
+
+$miniFontSize: 10px;
+$smallFontSize: 12px;
+$mainFontSize: 16px;
+$mediumFontSize: 20px;
+$headerFontSize: 48px;
+
+$marginMain: 30px;
+$sectionPadding: 94px;
+
+$whiteColor: #ffffff;
+$primaryColor: #6D31EE;
+$primaryShadeColor: #4F28A5;
+$primaryLightColor: #AA9DFA;
+$lightGreyColor: #E6E8EC;
+$GreyColor: #A1A6B4;
+$shadeGreyColor: #D2D5DD;
+$mainBlackColor: #121723;
+$lightBlackColor: #292E39;
+$promoColor: #F0D288;
+$promoShadeColor: #BB973E;
+
+$borderRadius: 40px;
+
+$background-image: url(../img/guest-default.jpg);

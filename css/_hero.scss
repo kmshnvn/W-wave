@@ -1,0 +1,73 @@
+.hero__container {
+  padding-top: $sectionPadding;
+  padding-bottom: $sectionPadding;
+  background-image: url(/img/microphone.png);
+  background-repeat: no-repeat;
+  background-position: 92.6% 43%;
+  background-size: 28.5%;
+
+  @media (max-width: $tablet) {
+    padding-top: 91px;
+    padding-bottom: 90px;
+
+    background-position: 86.9% 46%;
+    background-size: 25%;
+  }
+
+  @media (max-width: $smallTablet) {
+    background-image: none;
+  }
+
+  @media (max-width: $horizontalMobile) {
+    padding-top: 41px;
+    padding-bottom: 40px;
+  }
+}
+
+.hero__bold-header {
+  max-width: 635px;
+  font-weight: $boldFont;
+  font-size: 60px;
+  line-height: 100%;
+  color: $mainBlackColor;
+  margin-bottom: 15px;
+
+  @media (max-width: $tablet) {
+    max-width: 525px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+}
+
+.hero__italic-header {
+  font-weight: $normalFont;
+  font-style: italic;
+}
+
+.hero__text {
+  max-width: 635px;
+  font-size: $mainFontSize;
+  line-height: 150%;
+  margin-bottom: 45px;
+
+  @media (max-width: $tablet) {
+    max-width: 525px;
+    margin-bottom: 21px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+.hero__btn {
+  @media (max-width: $mobile) {
+    max-width: 80%;
+    font-size: $mainFontSize;
+    padding: 17px 45px;
+  }
+}

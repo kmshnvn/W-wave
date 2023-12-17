@@ -1,0 +1,183 @@
+@import '_variables';
+
+.modal {
+    position: absolute;
+    top: 80px;
+    right: 28.5%;
+    left: 28.5%;
+    background-color: $mainBlackColor;
+    z-index: 200;
+    visibility: hidden;
+    opacity: 0;
+
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    @media (max-width: $screenDesctop) {
+        right: 9.8%;
+        left: 9.8%;
+    }
+
+    @media (max-width: $smallTablet) {
+        right: 15%;
+        left: 15%;
+    }
+
+    @media (max-width: $horizontalMobile) {
+        top: 55px;
+        right: 32px;
+        left: 32px;
+    }
+}
+
+.modal--active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    padding: 60px;
+
+    @media (max-width: $smallTablet) {
+        padding: 60px 35px 60px 40px;
+    }
+
+    @media (max-width: $horizontalMobile) {
+        padding: 40px 20px;
+    }
+}
+
+.modal-content__text {
+    margin-bottom: 28px;
+
+    @media (max-width: $horizontalMobile) {
+        margin-bottom: 22px;
+    }
+    
+}
+
+.modal-content__header {
+    color: $whiteColor;
+    margin-bottom: 16px;
+
+    @media (max-width: $horizontalMobile) {
+        margin-bottom: 13px;
+    }
+}
+
+.modal-content__descr {
+    color: $GreyColor;
+    font-size: $mediumFontSize;
+
+    @media (max-width: $horizontalMobile) {
+        font-size: $smallFontSize;
+        line-height: 120%;
+    }
+}
+
+.modal-form {
+    padding-bottom: 30px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid $lightGreyColor;
+
+    @media (max-width: $horizontalMobile) {
+        margin-bottom: 15px;
+    }
+}
+
+.modal-form__input.about-form__input {
+    margin-right: 0;
+    margin-bottom: 30px;
+    max-width: 75%;
+
+    @media (max-width: $smallTablet) {
+        max-width: 100%;
+    }
+
+    @media (max-width: $horizontalMobile) {
+        padding: 9px 23px 9px 17px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.modal-form__btn {
+    @media (max-width: $horizontalMobile) {
+        font-size: $mainFontSize;
+        padding: 12px 57px;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 4.5%;
+    right: 3.7%;
+
+    @media (max-width: $smallTablet) {
+        right: 5%;
+    }
+
+    @media (max-width: $horizontalMobile) {
+        top: 4.5%;
+    }
+
+    svg {
+        @media (max-width: $horizontalMobile) {
+            height: 28px;
+        }
+    }
+}
+
+.modal-content__footer {
+    .modal-content__descr {
+        margin-bottom: 31px;
+
+        @media (max-width: $mobile) {
+            margin-bottom: 17px;
+        }
+    }
+}
+
+.modal-content__socials {
+    padding: 0 5px;
+
+    @media (max-width: $mobile) {
+        padding: 0 3px;
+    }
+
+
+    @media (max-width: $mobile) {
+        justify-content: space-between;
+        padding: 0 3px;
+    }
+}
+
+.modal-content__social {
+    &:not(:last-child) {
+        margin-right: 46px;
+    }
+}
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 100; 
+    visibility: hidden;
+    opacity: 0;
+
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.backdrop--active {
+    visibility: visible;
+    opacity: 1;
+}

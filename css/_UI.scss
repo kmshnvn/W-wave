@@ -1,0 +1,494 @@
+@import '_variables';
+
+// common
+
+.links {
+  position: relative;
+}
+
+.links::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -10px;
+  right: -10px;
+  bottom: -4px;
+  background: $primaryLightColor;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.links:hover {
+  color: $primaryColor;
+}
+
+.links:active {
+  color: $primaryShadeColor;
+}
+
+.links:focus-visible::before {
+  opacity: 1;
+}
+
+.btn-1:hover {
+  background-color: $primaryColor;
+  color: $whiteColor;
+}
+
+.btn-1:active {
+  background-color: $primaryShadeColor;
+  color: $whiteColor;
+  border-color: transparent;
+}
+
+.btn-1:focus-visible {
+  background-color: $primaryLightColor;
+  color: $whiteColor;
+}
+
+.btn-2:hover {
+  background-color: $primaryLightColor;
+}
+
+.btn-2:active {
+  background-color: $primaryShadeColor;
+}
+
+.btn-2:focus-visible {
+  background-color: $primaryLightColor;
+  outline: 2px solid $primaryShadeColor;
+}
+
+// header
+
+.header__enter:hover,
+.broadcast-info__btn:hover {
+  background-color: $mainBlackColor;
+  color: $whiteColor;
+}
+
+.header__enter:active,
+.broadcast-info__btn:active {
+  background-color: $primaryShadeColor;
+  color: $whiteColor;
+  border-color: transparent;
+}
+
+.header__enter:focus-visible,
+.broadcast-info__btn:focus-visible {
+  background-color: $primaryLightColor;
+}
+
+.buttons__search {
+  svg path {
+    transition-property: stroke;
+    transition-duration:  0.2s;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+.buttons__search:hover {
+  svg path {
+    stroke: $primaryLightColor
+  }
+}
+
+.buttons__search:focus-visible {
+  svg path {
+    stroke: $primaryLightColor
+  }
+}
+
+.buttons__search:active {
+  svg path {
+    stroke: $primaryShadeColor
+  }
+}
+
+.close-button {
+  svg {
+    circle, path {
+      transition-property: fill, stroke;
+      transition-duration:  0.2s;
+      transition-timing-function: ease-in-out;
+    }
+
+  }
+}
+
+.close-button:hover {
+  svg {
+    path, circle {
+      stroke: $primaryLightColor
+    }
+  }
+}
+
+.close-button:focus-visible {
+  svg {
+    path, circle {
+      stroke: $primaryLightColor
+    }
+  }
+}
+
+.close-button:active {
+  svg {
+    path, circle {
+      stroke: $primaryShadeColor
+    }
+  }
+}
+
+.music-block__icon {
+  svg g path {
+    transition-property: fill;
+    transition-duration:  0.2s;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+.music-block__icon:hover {
+  svg g path {
+    fill: $primaryColor;
+  }
+}
+
+.music-block__icon:focus-visible {
+  svg g path {
+    fill: $primaryLightColor;
+  }
+}
+
+.music-block__icon:active {
+  svg g path {
+    fill: $primaryShadeColor;
+  }
+}
+
+// podcasts
+
+.player-podcast__button {
+  svg {
+    circle, path {
+      transition-property: fill, stroke;
+      transition-duration:  0.2s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+}
+
+.player-podcast__button:hover {
+  svg {
+    circle {
+      stroke: $primaryColor;
+    };
+    path {
+      fill: $primaryColor
+    }
+  }
+}
+
+.player-podcast__button:focus-visible {
+  svg {
+    circle {
+      stroke: $primaryLightColor;
+    };
+    path {
+      fill: $primaryLightColor
+    }
+  }
+}
+
+.player-podcast__button:active {
+  svg {
+    circle {
+      stroke: $primaryShadeColor;
+    };
+    path {
+      fill: $primaryShadeColor
+    }
+  }
+}
+
+// broadcasts
+
+.broadcast-card__block:hover {
+  .broadcast-card__btn {
+    color: $primaryColor;
+  }
+
+  .broadcast-card__arrow {
+    width: 34px;
+  }
+
+  .broadcast-card__arrow path {
+    fill: $primaryColor;
+  }
+}
+
+.broadcast-card__block:focus-visible::before {
+    opacity: 1;
+}
+
+.broadcast-card__block:focus-visible {  
+  .broadcast-card__btn {
+    color: $whiteColor;
+    background-color: $primaryLightColor;
+  }
+
+  .broadcast-card__arrow path {
+    fill: $whiteColor;
+  }
+}
+
+.broadcast-card__block:active {
+  .broadcast-card__btn {
+    color: $primaryShadeColor;
+  }
+
+  .broadcast-card__arrow {
+    width: 34px;
+  }
+
+  .broadcast-card__arrow path {
+    fill: $primaryShadeColor;
+  }
+}
+
+// guests
+
+.guest-accordion__button:hover {
+  .guest-accordion__header {
+    color: $primaryLightColor;
+  }
+
+  svg {
+    circle,path {
+      stroke: $primaryLightColor;
+    } 
+  }
+}
+
+.guest-accordion__button:focus-visible {
+  background-color: $lightBlackColor;
+}
+
+.guest-accordion__button:active {
+  .guest-accordion__header {
+    color: $primaryLightColor;
+  }
+
+  svg {
+    circle {
+      fill: $primaryLightColor;
+    } 
+
+    path {
+      stroke: $whiteColor;
+    }
+  }
+}
+
+.tabs-content__btn:hover {
+  background-color: $primaryLightColor;
+}
+
+.tabs-content__btn:focus-visible {
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+}
+
+.tabs-nav__btn:hover {
+  color: $primaryLightColor;
+}
+
+.tabs-nav__btn:focus-visible {
+  background-color: $primaryColor;
+}
+
+.tabs-nav__btn:active {
+  color: $primaryShadeColor;
+}
+
+.tabs-nav__btn.tabs-nav__btn--active {
+  color: $primaryColor;
+}
+
+.btn-icon {
+  svg path {
+    transition-property: fill;
+    transition-duration:  0.2s;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+.btn-icon:hover {
+  svg path {
+    fill: $primaryColor;
+  }
+}
+
+.btn-icon:focus-visible {
+  svg path {
+    fill: $primaryLightColor
+  }
+}
+
+.btn-icon:active {
+  svg path {
+    fill: $primaryShadeColor
+  }
+}
+
+// playlists
+
+.pretty:hover .state label::before {
+  border-color: $primaryColor;
+}
+
+.pretty.p-default .focus-visible ~ .state label::before {
+  border-color: $primaryColor;
+  background-color: $shadeGreyColor;
+}
+
+.pretty.p-default input:checked~.state label:after {
+  background-color: $whiteColor !important;
+  box-shadow: 0px 0px 5px rgba(30, 13, 68, 0.8);
+}
+
+.pretty.p-default input:checked~.state label::before {
+  border: none;
+  background: $primaryColor;
+}
+
+.playlists__link:hover {
+  .playlist-item__img::after {
+    opacity: 0.8;
+  }
+
+  .playlist-item__img::before {
+    opacity: 0.8;
+  }
+
+  .playlist-item__info {
+    background-color: $primaryColor;
+    outline: transparent;
+    color: $whiteColor;
+  }
+
+  .playlist-item__text {
+    color: $whiteColor;
+  }
+}
+
+.playlists__link:focus-visible {
+  .playlist-item__img::after {
+    opacity: 0.8;
+  }
+
+  .playlist-item__img::before {
+    opacity: 0.8;
+  }
+
+  .playlist-item__info {
+    background-color: $primaryLightColor;
+    outline: transparent;
+    color: $mainBlackColor;
+  }
+
+  .playlist-item__text {
+    color: $mainBlackColor;
+  }
+}
+
+.playlists__link:active {
+  .playlist-item__img::after {
+    opacity: 0.8;
+  }
+
+  .playlist-item__img::before {
+    opacity: 0.8;
+  }
+
+  .playlist-item__info {
+    background-color: $primaryShadeColor;
+    outline: transparent;
+    color: $whiteColor;
+  }
+
+  .playlist-item__text {
+    color: $whiteColor;
+  }
+}
+
+
+
+// adv
+
+.adv__btn:hover {
+  background-color: $promoColor;
+  color: $mainBlackColor;
+}
+
+.adv__btn:focus-visible {
+  background-color: $promoShadeColor;
+  color: $mainBlackColor;
+}
+
+.adv__btn:active {
+  background-color: $promoShadeColor;
+  border-color: $promoShadeColor;
+  color: $mainBlackColor;
+}
+
+// about
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  svg {
+    circle, path {
+      stroke: $primaryColor;
+    }
+  }
+}
+
+.swiper-button-prev:focus-visible,
+.swiper-button-next:focus-visible {
+  svg {
+    circle, path {
+      stroke: $primaryLightColor;
+    }
+  }
+}
+
+.swiper-button-prev:active, .swiper-button-next:active {
+  svg {
+    circle, path {
+      stroke: $primaryShadeColor;
+    }
+  }
+}
+
+.about-form__input:hover {
+    background-color: $lightBlackColor;
+}
+
+.about-form__input:focus-visible {
+  background-color: $lightBlackColor;
+  border-color: $primaryLightColor;
+}
+
+
+// footer
+
+.footer-menu__link {
+  transition-property: background-color, color;
+  transition-duration:  0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.footer-menu__link:focus-visible {
+  background-color: $primaryLightColor;
+  color: $mainBlackColor;
+}

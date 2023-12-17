@@ -1,0 +1,139 @@
+@import '_fonts';
+@import '_variables';
+
+%transition {
+  transition-duration:  0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit ;
+  margin: 0;
+  outline: none;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+body {
+  min-width: 320px;
+  font-family: $fontFamily;
+  font-weight: $normalFont;
+}
+
+a {
+  max-width: max-content;
+  font-size: $mainFontSize;
+  color: inherit;
+  text-decoration: none;
+  transition-property: opacity, color;
+  transition-duration:  0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  font-weight: $normalFont;
+  font-size: $headerFontSize;
+  line-height: 100%;
+  color: $mainBlackColor;
+  margin-bottom: $marginMain;
+
+  @media (max-width: $mobile) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: $containerMaxWidth;
+  padding: 0 65px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet) {
+    padding: 0 100px;
+  }
+
+  @media (max-width: $smallTablet) {
+    padding: 0 114px;
+  }
+
+  @media (max-width: $horizontalMobile) {
+    padding: 0 32px;
+  }
+}
+
+.section {
+  min-width: 320px;
+  padding: 25px 0 25px;
+}
+
+.list-reset {
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-1 {
+  font-weight: 500;
+  font-size: $mainFontSize;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: $mainBlackColor;
+  max-width: 500px;
+
+  padding: 10px 31px;
+  border-radius: $borderRadius;
+  border: 2px solid $mainBlackColor;
+
+  transition-property: background-color, outline, color, border-color;
+  transition-duration:  0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.btn-2 {
+  font-weight: $mediumFont;
+  font-size: $mediumFontSize;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: $whiteColor;
+  max-width: 500px;
+
+  padding: 25px 54px;
+  border-radius: $borderRadius;
+  background-color: $primaryColor;
+
+  transition-property: background-color, outline, border-color;
+  transition-duration:  0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+
+
